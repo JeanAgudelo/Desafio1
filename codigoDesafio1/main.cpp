@@ -49,7 +49,28 @@ char* descomponerRLE(const unsigned char* data, int sz,int &out_len){
             out_len = 0;
             return nullptr;
         }
+        unsigned char ch = data[i++];
+        if (outpos+(int)num + 1>cap) {
+            while (outpos + (int)num + 1 > cap) cap *= 2;
+            char* tmp = new char[cap];
+            for (int k = 0; k < outpos; ++k) tmp[k] = out[k];
+            delete[] out;
+            out = tmp;
+        }
+        for(long long r = 0;r<num;++r)
+            out[outpos++] = (char)ch;
     }
+    if(outpos+1>cap){
+        char* tmp = new char[outpos+1];
+        for(int k =0;k<outpos;++k)
+            tmp[k] = out[k];
+        delete[] out;
+        out = tmp;
+        cap =outpos + 1;
+    }
+    out[outpos] = '\0';
+    out_len = outpos;
+    return out;
 }
 
 
