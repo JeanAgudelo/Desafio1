@@ -9,6 +9,7 @@ char* descomponerRLE(const unsigned char* data, int sz,int &out_len);
 int main()
 {
     cout << "esta es mi primer avance del desafio" << endl;
+    cout<<"Ingrese la cantidad de documentos que desea desencriptar"<<endl;
     return 0;
 }
 
@@ -72,7 +73,7 @@ char* descomponerRLE(const unsigned char* data, int sz,int &out_len){
     out_len = outpos;
     return out;
 }
-
+//voy a iniciar a descomponer el LZ78 a partir de hoy, creo que es la parte mas dificil y no he podido desifrar como hacerlo, estube investigando en algunos sitios de internet y siempre es largo y tedioso.
 
 
 
