@@ -5,11 +5,23 @@ using namespace std;
 unsigned ror(unsigned char r,int n);
 unsigned char* XOR(const unsigned char* enc,int sz,int n, unsigned char k);
 char* descomponerRLE(const unsigned char* data, int sz,int &out_len);
+char* descomponerLZ78(const unsigned char* data, int sz, int &out_len);
 
 int main()
 {
     cout << "esta es mi primer avance del desafio" << endl;
-    cout<<"Ingrese la cantidad de documentos que desea desencriptar"<<endl;
+    cout << "Cuantos casos vas a evaluar? ";
+    int ncases = 0;
+    if (!(cin >> ncases)) {
+        cout << "Entrada invalida.\n";
+        return 1;
+    }
+    char dunny;
+    cin.get(dunny);
+
+    for(int numCasos = 0;numCasos <=ncases; ++numCasos){
+
+    }
     return 0;
 }
 
@@ -75,6 +87,8 @@ char* descomponerRLE(const unsigned char* data, int sz,int &out_len){
 }
 //voy a iniciar a descomponer el LZ78 a partir de hoy, creo que es la parte mas dificil y no he podido desifrar como hacerlo, estube investigando en algunos sitios de internet y siempre es largo y tedioso.
 
+char* descomponerLZ78(const unsigned char* data, int sz, int &out_len){
 
+}
 
 
